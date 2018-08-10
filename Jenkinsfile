@@ -8,8 +8,11 @@ pipeline {
     }
     stage('git') {
       steps {
-        git(url: 'http://test.com', branch: 'master')
+        git 'http://test.com'
       }
     }
+  }
+  environment {
+    branch = 'master'
   }
 }
